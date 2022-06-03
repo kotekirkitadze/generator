@@ -1,0 +1,8 @@
+<div class="shell" *ngFor="let item of data">
+  {{ item.firstName }}
+
+  <br />
+  <button (click)="show(item.id)">Show details</button>
+
+  <app-item [data]="item" *ngIf="selected == item.id"></app-item>
+</div>
